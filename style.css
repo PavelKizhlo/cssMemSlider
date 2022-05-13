@@ -12,6 +12,10 @@
     background-color: #ac1800;
 }
 
+.hidden {
+    display: none;
+}
+
 .slider {
     display: grid;
     gap: 1vw;
@@ -65,18 +69,11 @@
 
 .button {
     display: block;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
     border-radius: 50%;
     width: 16px;
     height: 16px;
-
     border: 2px solid wheat;
     transition: 0.2s all linear;
-    outline: none;
     cursor: pointer;
 }
 
@@ -84,13 +81,25 @@
     border: 6px solid wheat;
 }
 
-.button:checked {
-    /* border: 5px solid black; */
+#mem1:checked~.controls label[for="mem1"] span {
     background-color: wheat;
 }
 
+#mem2:checked~.controls label[for="mem2"] span {
+    background-color: wheat;
+}
 
+#mem3:checked~.controls label[for="mem3"] span {
+    background-color: wheat;
+}
 
+#mem4:checked~.controls label[for="mem4"] span {
+    background-color: wheat;
+}
+
+#mem5:checked~.controls label[for="mem5"] span {
+    background-color: wheat;
+}
 
 @media (min-width: 0px) {
     .wrapper {
