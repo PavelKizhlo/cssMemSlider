@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 .title {
     text-align: center;
-    font-family: "Arial", sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    color: #5c0000;
 }
 
 .wrapper {
@@ -50,6 +54,8 @@
 
 .slider-text {
     margin: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.1rem;
     color: wheat;
 }
 
@@ -104,6 +110,10 @@
 }
 
 @media (min-width: 0px) {
+    .title {
+        font-size: 1em;
+    }
+
     .wrapper {
         width: 92vw;
         padding: 1vw;
@@ -128,6 +138,7 @@
 
     .slider-text {
         width: 88vw;
+        text-align: center;
     }
 
     .controls {
@@ -177,6 +188,10 @@
 }
 
 @media (min-width: 768px) {
+    .title {
+        font-size: 1.6em;
+    }
+
     .wrapper {
         width: 82vw;
         padding: 1vw;
@@ -201,6 +216,7 @@
 
     .slider-text {
         width: 58vw;
+        text-align: start;
     }
 
     .controls {
@@ -250,6 +266,10 @@
 }
 
 @media (min-width: 1280px) {
+    .title {
+        font-size: 2em;
+    }
+
     .wrapper {
         width: 52vw;
         padding: 1vw;
@@ -274,6 +294,7 @@
 
     .slider-text {
         width: 33vw;
+        text-align: start;
     }
 
     .controls {
