@@ -48,7 +48,45 @@
 }
 
 .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #5c0000;
+}
+
+.radio-group {
+    display: flex;
+}
+
+.button-area {
+    padding: 0.4vw;
+    cursor: pointer;
+}
+
+.button {
+    display: block;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid wheat;
+    transition: 0.2s all linear;
+    outline: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    border: 6px solid wheat;
+}
+
+.button:checked {
+    /* border: 5px solid black; */
+    background-color: wheat;
 }
 
 
@@ -83,6 +121,7 @@
 
     .controls {
         grid-area: 2/1/3/2;
+        padding: 5vw;
     }
 }
 
@@ -115,6 +154,7 @@
 
     .controls {
         grid-area: 2/2/3/3;
+        padding: 0;
     }
 }
 
@@ -147,5 +187,6 @@
 
     .controls {
         grid-area: 2/2/3/3;
+        padding: 0;
     }
 }
