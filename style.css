@@ -9,27 +9,41 @@
 
 .wrapper {
     margin: 0 auto;
+    background-color: #ac1800;
 }
 
 .slider {
     display: grid;
-    grid-template-columns: 4fr 1fr;
-    /* grid-template-rows: 30vh auto; */
+    gap: 1vw;
 }
 
 .image-wrapper {
-    display: flex;
-    width: 100%;
-    grid-column: 1/3;
     overflow: hidden;
 }
 
+.slides {
+    display: flex;
+}
+
 .text-wrapper {
-    background-color: lightgray;
+    padding: 1vw;
+    background-color: #5c0000;
+    overflow: hidden;
+}
+
+.notes {
+    width: fit-content;
+    display: flex;
+    gap: 3vw;
+}
+
+.slider-text {
+    margin: 0;
+    color: wheat;
 }
 
 .controls {
-    background-color: bisque;
+    background-color: #5c0000;
 }
 
 
@@ -37,42 +51,96 @@
 
 @media (min-width: 0px) {
     .wrapper {
-        width: 90vw;
+        width: 92vw;
+        padding: 1vw;
     }
 
     .slider {
         width: 90vw;
+        grid-template-columns: 1fr;
+    }
+
+    .image-wrapper {
+        grid-area: 1/1/2/2;
     }
 
     .slider-image {
         width: 90vw;
+    }
+
+    .text-wrapper {
+        grid-area: 3/1/4/2;
+    }
+
+    .slider-text {
+        width: 88vw;
+    }
+
+    .controls {
+        grid-area: 2/1/3/2;
     }
 }
 
 @media (min-width: 768px) {
     .wrapper {
-        width: 80vw;
+        width: 82vw;
+        padding: 1vw;
     }
 
     .slider {
         width: 80vw;
+        grid-template-columns: 60vw 1fr;
+    }
+
+    .image-wrapper {
+        grid-area: 1/1/2/3;
     }
 
     .slider-image {
         width: 80vw;
+    }
+
+    .text-wrapper {
+        grid-area: 2/1/3/2;
+    }
+
+    .slider-text {
+        width: 58vw;
+    }
+
+    .controls {
+        grid-area: 2/2/3/3;
     }
 }
 
 @media (min-width: 1280px) {
     .wrapper {
-        width: 60vw;
+        width: 52vw;
+        padding: 1vw;
     }
 
     .slider {
-        width: 60vw;
+        width: 50vw;
+        grid-template-columns: 35vw 1fr;
+    }
+
+    .image-wrapper {
+        grid-area: 1/1/2/3;
     }
 
     .slider-image {
-        width: 60vw;
+        width: 50vw;
+    }
+
+    .text-wrapper {
+        grid-area: 2/1/3/2;
+    }
+
+    .slider-text {
+        width: 33vw;
+    }
+
+    .controls {
+        grid-area: 2/2/3/3;
     }
 }
