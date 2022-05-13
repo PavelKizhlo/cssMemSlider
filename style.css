@@ -21,8 +21,13 @@
     overflow: hidden;
 }
 
+.slider-image {
+    display: block;
+}
+
 .slides {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .text-wrapper {
