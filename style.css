@@ -9,7 +9,7 @@
 
 .wrapper {
     margin: 0 auto;
-    background-color: #ac1800;
+    background-color: #5c0000;
 }
 
 .hidden {
@@ -32,6 +32,7 @@
 .slides {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    transition: 0.3s all ease;
 }
 
 .text-wrapper {
@@ -44,6 +45,7 @@
     width: fit-content;
     display: flex;
     gap: 3vw;
+    transition: 0.3s all ease;
 }
 
 .slider-text {
@@ -132,6 +134,46 @@
         grid-area: 2/1/3/2;
         padding: 5vw;
     }
+
+    #mem1:checked~.image-wrapper .slides {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.image-wrapper .slides {
+        transform: translateX(-90vw);
+    }
+
+    #mem3:checked~.image-wrapper .slides {
+        transform: translateX(-180vw);
+    }
+
+    #mem4:checked~.image-wrapper .slides {
+        transform: translateX(-270vw);
+    }
+
+    #mem5:checked~.image-wrapper .slides {
+        transform: translateX(-360vw);
+    }
+
+    #mem1:checked~.text-wrapper .notes {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.text-wrapper .notes {
+        transform: translateX(-91vw);
+    }
+
+    #mem3:checked~.text-wrapper .notes {
+        transform: translateX(-182vw);
+    }
+
+    #mem4:checked~.text-wrapper .notes {
+        transform: translateX(-273vw);
+    }
+
+    #mem5:checked~.text-wrapper .notes {
+        transform: translateX(-364vw);
+    }
 }
 
 @media (min-width: 768px) {
@@ -165,6 +207,46 @@
         grid-area: 2/2/3/3;
         padding: 0;
     }
+
+    #mem1:checked~.image-wrapper .slides {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.image-wrapper .slides {
+        transform: translateX(-80vw);
+    }
+
+    #mem3:checked~.image-wrapper .slides {
+        transform: translateX(-160vw);
+    }
+
+    #mem4:checked~.image-wrapper .slides {
+        transform: translateX(-240vw);
+    }
+
+    #mem5:checked~.image-wrapper .slides {
+        transform: translateX(-320vw);
+    }
+
+    #mem1:checked~.text-wrapper .notes {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.text-wrapper .notes {
+        transform: translateX(-61vw);
+    }
+
+    #mem3:checked~.text-wrapper .notes {
+        transform: translateX(-122vw);
+    }
+
+    #mem4:checked~.text-wrapper .notes {
+        transform: translateX(-183vw);
+    }
+
+    #mem5:checked~.text-wrapper .notes {
+        transform: translateX(-244vw);
+    }
 }
 
 @media (min-width: 1280px) {
@@ -197,5 +279,45 @@
     .controls {
         grid-area: 2/2/3/3;
         padding: 0;
+    }
+
+    #mem1:checked~.image-wrapper .slides {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.image-wrapper .slides {
+        transform: translateX(-50vw);
+    }
+
+    #mem3:checked~.image-wrapper .slides {
+        transform: translateX(-100vw);
+    }
+
+    #mem4:checked~.image-wrapper .slides {
+        transform: translateX(-150vw);
+    }
+
+    #mem5:checked~.image-wrapper .slides {
+        transform: translateX(-200vw);
+    }
+
+    #mem1:checked~.text-wrapper .notes {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.text-wrapper .notes {
+        transform: translateX(-36vw);
+    }
+
+    #mem3:checked~.text-wrapper .notes {
+        transform: translateX(-72vw);
+    }
+
+    #mem4:checked~.text-wrapper .notes {
+        transform: translateX(-108vw);
+    }
+
+    #mem5:checked~.text-wrapper .notes {
+        transform: translateX(-144vw);
     }
 }
