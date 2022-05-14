@@ -75,6 +75,10 @@
     cursor: pointer;
 }
 
+.button-area:hover .button {
+    border: 6px solid wheat;
+}
+
 .button {
     display: block;
     border-radius: 50%;
