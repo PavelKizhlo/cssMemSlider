@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #5c0000;
+}
+
+.wrapper {
+    margin: 0 auto;
+    background-color: #5c0000;
+}
+
+.hidden {
+    display: none;
+}
+
+.slider {
+    display: grid;
+    gap: 1vw;
+}
+
+.image-wrapper {
+    overflow: hidden;
+}
+
+.slider-image {
+    display: block;
+}
+
+.slides {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    transition: 0.3s all ease;
+}
+
+.text-wrapper {
+    padding: 1vw;
+    background-color: #5c0000;
+    overflow: hidden;
+}
+
+.notes {
+    width: fit-content;
+    display: flex;
+    gap: 3vw;
+    transition: 0.3s all ease;
+}
+
+.slider-text {
+    margin: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.1rem;
+    color: wheat;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5c0000;
+}
+
+.radio-group {
+    display: flex;
+}
+
+.button-area {
+    padding: 0.4vw;
+    cursor: pointer;
+}
+
+.button-area:hover .button {
+    border: 6px solid wheat;
+}
+
+.button {
+    display: block;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid wheat;
+    transition: 0.2s all linear;
+    cursor: pointer;
+}
+
+.button:hover {
+    border: 6px solid wheat;
+}
+
+#mem1:checked~.controls label[for="mem1"] span {
+    background-color: wheat;
+}
+
+#mem2:checked~.controls label[for="mem2"] span {
+    background-color: wheat;
+}
+
+#mem3:checked~.controls label[for="mem3"] span {
+    background-color: wheat;
+}
+
+#mem4:checked~.controls label[for="mem4"] span {
+    background-color: wheat;
+}
+
+#mem5:checked~.controls label[for="mem5"] span {
+    background-color: wheat;
+}
+
+@media (min-width: 0px) {
+    .title {
+        font-size: 1em;
+    }
+
+    .wrapper {
+        width: 92vw;
+        padding: 1vw;
+    }
+
+    .slider {
+        width: 90vw;
+        grid-template-columns: 1fr;
+    }
+
+    .image-wrapper {
+        grid-area: 1/1/2/2;
+    }
+
+    .slider-image {
+        width: 90vw;
+    }
+
+    .text-wrapper {
+        grid-area: 3/1/4/2;
+    }
+
+    .slider-text {
+        width: 88vw;
+        text-align: center;
+    }
+
+    .controls {
+        grid-area: 2/1/3/2;
+        padding: 5vw;
+    }
+
+    #mem1:checked~.image-wrapper .slides {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.image-wrapper .slides {
+        transform: translateX(-90vw);
+    }
+
+    #mem3:checked~.image-wrapper .slides {
+        transform: translateX(-180vw);
+    }
+
+    #mem4:checked~.image-wrapper .slides {
+        transform: translateX(-270vw);
+    }
+
+    #mem5:checked~.image-wrapper .slides {
+        transform: translateX(-360vw);
+    }
+
+    #mem1:checked~.text-wrapper .notes {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.text-wrapper .notes {
+        transform: translateX(-91vw);
+    }
+
+    #mem3:checked~.text-wrapper .notes {
+        transform: translateX(-182vw);
+    }
+
+    #mem4:checked~.text-wrapper .notes {
+        transform: translateX(-273vw);
+    }
+
+    #mem5:checked~.text-wrapper .notes {
+        transform: translateX(-364vw);
+    }
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 1.6em;
+    }
+
+    .wrapper {
+        width: 82vw;
+        padding: 1vw;
+    }
+
+    .slider {
+        width: 80vw;
+        grid-template-columns: 60vw 1fr;
+    }
+
+    .image-wrapper {
+        grid-area: 1/1/2/3;
+    }
+
+    .slider-image {
+        width: 80vw;
+    }
+
+    .text-wrapper {
+        grid-area: 2/1/3/2;
+    }
+
+    .slider-text {
+        width: 58vw;
+        text-align: start;
+    }
+
+    .controls {
+        grid-area: 2/2/3/3;
+        padding: 0;
+    }
+
+    #mem1:checked~.image-wrapper .slides {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.image-wrapper .slides {
+        transform: translateX(-80vw);
+    }
+
+    #mem3:checked~.image-wrapper .slides {
+        transform: translateX(-160vw);
+    }
+
+    #mem4:checked~.image-wrapper .slides {
+        transform: translateX(-240vw);
+    }
+
+    #mem5:checked~.image-wrapper .slides {
+        transform: translateX(-320vw);
+    }
+
+    #mem1:checked~.text-wrapper .notes {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.text-wrapper .notes {
+        transform: translateX(-61vw);
+    }
+
+    #mem3:checked~.text-wrapper .notes {
+        transform: translateX(-122vw);
+    }
+
+    #mem4:checked~.text-wrapper .notes {
+        transform: translateX(-183vw);
+    }
+
+    #mem5:checked~.text-wrapper .notes {
+        transform: translateX(-244vw);
+    }
+}
+
+@media (min-width: 1280px) {
+    .title {
+        font-size: 2em;
+    }
+
+    .wrapper {
+        width: 52vw;
+        padding: 1vw;
+    }
+
+    .slider {
+        width: 50vw;
+        grid-template-columns: 35vw 1fr;
+    }
+
+    .image-wrapper {
+        grid-area: 1/1/2/3;
+    }
+
+    .slider-image {
+        width: 50vw;
+    }
+
+    .text-wrapper {
+        grid-area: 2/1/3/2;
+    }
+
+    .slider-text {
+        width: 33vw;
+        text-align: start;
+    }
+
+    .controls {
+        grid-area: 2/2/3/3;
+        padding: 0;
+    }
+
+    #mem1:checked~.image-wrapper .slides {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.image-wrapper .slides {
+        transform: translateX(-50vw);
+    }
+
+    #mem3:checked~.image-wrapper .slides {
+        transform: translateX(-100vw);
+    }
+
+    #mem4:checked~.image-wrapper .slides {
+        transform: translateX(-150vw);
+    }
+
+    #mem5:checked~.image-wrapper .slides {
+        transform: translateX(-200vw);
+    }
+
+    #mem1:checked~.text-wrapper .notes {
+        transform: translateX(0);
+    }
+
+    #mem2:checked~.text-wrapper .notes {
+        transform: translateX(-36vw);
+    }
+
+    #mem3:checked~.text-wrapper .notes {
+        transform: translateX(-72vw);
+    }
+
+    #mem4:checked~.text-wrapper .notes {
+        transform: translateX(-108vw);
+    }
+
+    #mem5:checked~.text-wrapper .notes {
+        transform: translateX(-144vw);
+    }
+}
